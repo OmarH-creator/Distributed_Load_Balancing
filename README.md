@@ -263,12 +263,12 @@ In stress mode, each request:
 2. Constructs prompt: `Context: {context}\nQuestion: {query}\nAnswer in one short sentence:`
 3. Sends to LLM for inference
 
-## 👤 Author
+##  Author
 
 **Omar Hassan**
 - GitHub: [@OmarH-creator](https://github.com/OmarH-creator)
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - [Ollama](https://ollama.ai) for local LLM inference
 - Built for distributed systems and load balancing research
