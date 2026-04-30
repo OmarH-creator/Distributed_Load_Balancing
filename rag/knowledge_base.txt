@@ -1,0 +1,5 @@
+Load balancing sends requests to different worker nodes.
+GPU workers process AI tasks.
+RAG retrieves useful context before asking the LLM.
+Fault tolerance keeps the system working if one worker fails.
+Distributed systems use many nodes to process many requests.
