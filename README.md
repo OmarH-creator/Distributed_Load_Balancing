@@ -117,7 +117,7 @@ This project implements a distributed load balancing system designed to handle c
    curl http://localhost:11434/api/generate -d '{"model":"smollm:135m","prompt":"test"}'
    ```
 
-## ⚙️ Configuration
+##  Configuration
 
 Edit `common/config.py` to customize system behavior:
 
