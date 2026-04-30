@@ -99,7 +99,7 @@ This project implements a distributed load balancing system designed to handle c
   ollama serve
   ```
 
-## 🛠️ Installation
+##  Installation
 
 1. **Clone the repository**
    ```bash
