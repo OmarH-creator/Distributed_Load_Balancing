@@ -1,11 +1,11 @@
-# 🚀 Distributed Load Balancing System for LLM Inference
+#  Distributed Load Balancing System for LLM Inference
 
 A high-performance distributed system that efficiently balances Large Language Model (LLM) inference requests across multiple GPU workers using round-robin scheduling, with integrated Retrieval-Augmented Generation (RAG) capabilities.
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - [Overview](#overview)
 - [Architecture](#architecture)
@@ -18,7 +18,7 @@ A high-performance distributed system that efficiently balances Large Language M
 - [Performance Metrics](#performance-metrics)
 - [How It Works](#how-it-works)
 
-## 🎯 Overview
+##  Overview
 
 This project implements a distributed load balancing system designed to handle concurrent LLM inference requests efficiently. It distributes workload across multiple GPU workers using a round-robin algorithm, integrates RAG for context-enhanced responses, and provides comprehensive performance metrics.
 
@@ -28,7 +28,7 @@ This project implements a distributed load balancing system designed to handle c
 - Load testing LLM systems
 - RAG-enhanced question answering at scale
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 ┌─────────────┐
@@ -74,19 +74,19 @@ This project implements a distributed load balancing system designed to handle c
 | **LLM Inference** | Integrates with Ollama API for text generation |
 | **Load Generator** | Simulates concurrent users with ThreadPoolExecutor |
 
-## ✨ Features
+##  Features
 
-- ⚡ **Round-Robin Load Balancing**: Evenly distributes requests across workers
-- 🔄 **Concurrent Request Handling**: Multi-threaded load generation with configurable thread pools
-- 🧠 **RAG Integration**: Context-enhanced responses using retrieval system
-- 📊 **Performance Metrics**: Real-time latency, throughput, and worker distribution tracking
-- 🎛️ **Dual Operating Modes**: 
+-  **Round-Robin Load Balancing**: Evenly distributes requests across workers
+-  **Concurrent Request Handling**: Multi-threaded load generation with configurable thread pools
+-  **RAG Integration**: Context-enhanced responses using retrieval system
+-  **Performance Metrics**: Real-time latency, throughput, and worker distribution tracking
+-  **Dual Operating Modes**: 
   - **Normal Mode**: Minimal processing for latency testing
   - **Stress Mode**: Full RAG + LLM inference for load testing
-- 🔧 **Configurable Parameters**: Adjustable workers, users, and thread limits
-- 🤖 **Ollama Integration**: Uses lightweight `smollm:135m` model
+-  **Configurable Parameters**: Adjustable workers, users, and thread limits
+-  **Ollama Integration**: Uses lightweight `smollm:135m` model
 
-## 📦 Prerequisites
+##  Prerequisites
 
 - **Python**: 3.8 or higher
 - **Ollama**: Installed and running locally
@@ -142,7 +142,7 @@ MAX_THREADS = 16       # Maximum concurrent threads
 - **Normal Mode**: Sends minimal prompts (`.`) with 1-token responses for latency benchmarking
 - **Stress Mode**: Full RAG retrieval + LLM inference with 10-token responses for load testing
 
-## 🚀 Usage
+##  Usage
 
 ### Run the Complete System
 
@@ -181,7 +181,7 @@ SAMPLE ANSWER
 Load balancing distributes requests across multiple worker nodes to improve performance.
 ```
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 llm-load-balancing-project/
@@ -215,7 +215,7 @@ llm-load-balancing-project/
     └── knowledge_base.txt     # Knowledge base content
 ```
 
-## 📊 Performance Metrics
+##  Performance Metrics
 
 The system tracks and reports:
 
@@ -232,7 +232,7 @@ The system tracks and reports:
 | 1000 users, 4 workers, 16 threads | ~22 req/s | ~0.18s | 4 |
 | 500 users, 2 workers, 8 threads | ~18 req/s | ~0.11s | 2 |
 
-## 🔍 How It Works
+##  How It Works
 
 ### Request Flow
 
@@ -262,20 +262,6 @@ In stress mode, each request:
 1. Retrieves relevant context from knowledge base
 2. Constructs prompt: `Context: {context}\nQuestion: {query}\nAnswer in one short sentence:`
 3. Sends to LLM for inference
-
-## 🤝 Contributing
-
-Contributions are welcome! Areas for enhancement:
-
-- Additional load balancing strategies (least connections, weighted)
-- Fault tolerance and worker health checks
-- Real-time monitoring dashboard
-- Support for multiple LLM backends
-- Advanced RAG with vector embeddings
-
-## 📄 License
-
-This project is licensed under the MIT License.
 
 ## 👤 Author
 
